@@ -1,0 +1,5 @@
+{
+  "name": "Easy Fix Encyclopedia",
+  "description": "A minimalist, high-performance guide for technical, mechanical, and administrative tasks.",
+  "requestFramePermissions": ["camera", "microphone"]
+}
