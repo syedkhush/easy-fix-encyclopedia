@@ -1,8 +1,6 @@
 {
   "name": "easy-fix-encyclopedia",
   "version": "1.0.0",
-  "description": "Simple Web Service for Sami's Fix-it Guides",
-  "main": "index.html",
   "scripts": {
     "start": "npx serve ."
   }
