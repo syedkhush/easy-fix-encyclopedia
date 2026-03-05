@@ -3,11 +3,475 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Google AI Studio App</title>
+    <title>Easy Fix Encyclopedia – No More Complex</title>
+    <meta
+      name="description"
+      content="Easy Fix Encyclopedia – fast, safety-first DIY guides for Windows, Linux, electrical, and certificate fixes. No fluff, no complexity."
+    />
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <header class="efe-header">
+      <nav class="efe-nav">
+        <div class="efe-brand">
+          <span class="efe-brand-mark">EFE</span>
+          <div class="efe-brand-text">
+            <span class="efe-brand-title">Easy Fix Encyclopedia</span>
+            <span class="efe-brand-subtitle">No More Complex · Safety First</span>
+          </div>
+        </div>
+        <button class="efe-nav-toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+        </button>
+        <div class="efe-nav-links">
+          <a href="#top" class="efe-nav-link">Home</a>
+          <a href="#os-guides" class="efe-nav-link">OS Setup</a>
+          <a href="#electrical" class="efe-nav-link">EEE Basics</a>
+          <a href="#certificates" class="efe-nav-link">Certificates</a>
+          <button class="efe-mode-toggle" type="button" aria-label="Toggle dark mode">
+            <span class="efe-mode-icon">☀</span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="top" class="efe-main">
+      <section class="efe-hero">
+        <div class="efe-hero-text">
+          <h1>Easy Fix Encyclopedia</h1>
+          <p>
+            High‑class, lightweight repair guides for real humans on real devices.
+            Built for phones in dusty workshops, labs, and hostels – not big screens in offices.
+          </p>
+          <div class="efe-search-wrapper">
+            <label for="efe-search" class="efe-search-label">Search fixes</label>
+            <div class="efe-search-row">
+              <input
+                id="efe-search"
+                type="search"
+                inputmode="search"
+                autocomplete="off"
+                placeholder="Search: Windows 11, Ubuntu, socket test, JNTUA CMM..."
+              />
+              <button type="button" class="efe-search-clear" aria-label="Clear search">
+                ✕
+              </button>
+            </div>
+            <p class="efe-search-hint">
+              Type a keyword – cards below will filter instantly. No internet? Page still works.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section aria-label="Fix collections" class="efe-card-section" id="os-guides">
+        <h2 class="efe-section-title">Core Fix Library</h2>
+        <div class="efe-card-grid" id="efe-card-grid">
+          <article
+            class="efe-card"
+            data-keywords="windows 11 install installation usb bootable uefi bios iso media creation"
+            data-target="#guide-windows-11"
+          >
+            <h3>Windows 11 Installation – USB Bootable</h3>
+            <p>
+              Clean, repeatable method to install Windows&nbsp;11 using a bootable USB on modern UEFI systems.
+            </p>
+            <ul class="efe-card-meta">
+              <li>Difficulty: Medium</li>
+              <li>Time: 45–90 minutes</li>
+            </ul>
+            <button type="button" class="efe-card-button">Open step‑by‑step guide</button>
+          </article>
+
+          <article
+            class="efe-card"
+            data-keywords="linux ubuntu installation setup dual boot pendrive lts"
+            data-target="#guide-ubuntu"
+          >
+            <h3>Linux Setup – Ubuntu Focus</h3>
+            <p>
+              Install Ubuntu the sane way, either standalone or alongside Windows, with secure‑boot friendly steps.
+            </p>
+            <ul class="efe-card-meta">
+              <li>Difficulty: Medium</li>
+              <li>Time: 30–60 minutes</li>
+            </ul>
+            <button type="button" class="efe-card-button">Open step‑by‑step guide</button>
+          </article>
+
+          <article
+            class="efe-card"
+            data-keywords="eee electrical socket outlet multimeter test mains ac india safety live neutral earth"
+            data-target="#guide-socket-test"
+          >
+            <h3>EEE Basics – Test a Household Socket</h3>
+            <p>
+              Safely check a 230&nbsp;V wall socket with a basic digital multimeter without shocking yourself.
+            </p>
+            <ul class="efe-card-meta">
+              <li>Difficulty: High (safety critical)</li>
+              <li>Time: 10–15 minutes</li>
+            </ul>
+            <button type="button" class="efe-card-button">Open step‑by‑step guide</button>
+          </article>
+
+          <article
+            class="efe-card"
+            data-keywords="jntua cmm pc certificate duplicate lost damage university exam cell"
+            data-target="#guide-jntua-cert"
+          >
+            <h3>Certificate Fix – Duplicate JNTUA CMM/PC</h3>
+            <p>
+              Exact administrative steps to apply for a duplicate CMM/PC from JNTUA with minimal back‑and‑forth.
+            </p>
+            <ul class="efe-card-meta">
+              <li>Difficulty: Low</li>
+              <li>Time: 1–3 working days (processing)</li>
+            </ul>
+            <button type="button" class="efe-card-button">Open step‑by‑step guide</button>
+          </article>
+        </div>
+      </section>
+
+      <hr class="efe-divider" />
+
+      <!-- Windows 11 Installation Guide -->
+      <section id="guide-windows-11" class="efe-guide">
+        <h2>Windows 11 Installation – USB Bootable Method</h2>
+
+        <div class="efe-safety-box efe-safety-critical">
+          <h3>🔴 Red Alert – Data & Power Safety</h3>
+          <ul>
+            <li><strong>Back up</strong> every important file from the target PC. This process can erase the entire disk.</li>
+            <li><strong>Use only</strong> official Microsoft media creation tools or ISOs.</li>
+            <li><strong>Keep the laptop on AC power</strong> during installation. Do not rely only on battery.</li>
+            <li><strong>Unplug other external drives</strong> to avoid wiping the wrong disk.</li>
+          </ul>
+        </div>
+
+        <h3>Toolkit / Requirements</h3>
+        <ul>
+          <li>Another working PC with internet access.</li>
+          <li>8&nbsp;GB or larger USB 2.0/3.0 pendrive (all data on it will be erased).</li>
+          <li>Official Windows&nbsp;11 ISO or Microsoft Media Creation Tool.</li>
+          <li>Target PC that supports Windows&nbsp;11 (UEFI, TPM 2.0, Secure Boot recommended).</li>
+        </ul>
+
+        <hr />
+
+        <h3>Step‑by‑Step Execution</h3>
+        <ol>
+          <li><strong>Download</strong> the official Windows&nbsp;11 installer from the Microsoft website on the working PC.</li>
+          <li><strong>Insert</strong> the USB drive and run the Media Creation Tool or your ISO‑to‑USB tool of choice.</li>
+          <li><strong>Select</strong> your USB drive carefully and confirm that you are okay with erasing its contents.</li>
+          <li><strong>Create</strong> the bootable USB and wait until the tool completes without errors, then safely eject it.</li>
+          <li><strong>Connect</strong> the bootable USB to the target PC and power it on.</li>
+          <li><strong>Enter</strong> the boot menu or BIOS/UEFI (typically by tapping F2, F10, F12, or Del immediately at power‑on).</li>
+          <li><strong>Choose</strong> the USB drive as the first boot device, ensuring UEFI mode and Secure Boot are enabled where supported.</li>
+          <li><strong>Start</strong> the Windows setup, select your language and keyboard layout, and click “Install now”.</li>
+          <li><strong>Pick</strong> “Custom: Install Windows only” for a clean install, then select the correct system drive or partition.</li>
+          <li><strong>Format</strong> only the partition you intend to use for Windows; double‑check drive letters and sizes before proceeding.</li>
+          <li><strong>Wait</strong> for copying and installing to finish; the PC will reboot several times – do not power off.</li>
+          <li><strong>Remove</strong> the USB when Windows first restarts to avoid booting the installer again.</li>
+          <li><strong>Follow</strong> the on‑screen steps to set up region, account, privacy, and network settings.</li>
+        </ol>
+
+        <hr />
+
+        <h3>Verification</h3>
+        <ul>
+          <li>System boots directly into Windows&nbsp;11 without showing the installer screen.</li>
+          <li><code>Settings → System → About</code> reports “Windows&nbsp;11” and the expected edition.</li>
+          <li>Disk layout shows your system drive with healthy partitions and expected free space.</li>
+        </ul>
+
+        <h3>Pro Tip</h3>
+        <p>
+          After installation, <strong>run Windows Update fully once</strong>, then create a system restore point.
+          This gives you a clean rollback snapshot before you start installing drivers and random desktop apps.
+        </p>
+      </section>
+
+      <hr class="efe-divider" />
+
+      <!-- Ubuntu Setup Guide -->
+      <section id="guide-ubuntu" class="efe-guide">
+        <h2>Linux Setup – Ubuntu (Desktop) Focus</h2>
+
+        <div class="efe-safety-box efe-safety-warning">
+          <h3>🔴 Red Alert – Partition Safety</h3>
+          <ul>
+            <li><strong>Never delete</strong> or format a partition unless you are 100% sure what it contains.</li>
+            <li><strong>Take a screenshot or note down</strong> your current Windows partition layout before starting.</li>
+            <li><strong>Avoid forced power‑off</strong> while Ubuntu is resizing or creating partitions.</li>
+          </ul>
+        </div>
+
+        <h3>Toolkit / Requirements</h3>
+        <ul>
+          <li>Ubuntu Desktop ISO (preferably latest LTS version).</li>
+          <li>8&nbsp;GB+ USB drive.</li>
+          <li>Tool like Rufus, balenaEtcher, or Ubuntu Startup Disk Creator.</li>
+          <li>Stable power and internet (for updates and drivers).</li>
+        </ul>
+
+        <hr />
+
+        <h3>Step‑by‑Step Execution</h3>
+        <ol>
+          <li><strong>Download</strong> the Ubuntu Desktop ISO from the official Ubuntu website.</li>
+          <li><strong>Create</strong> a bootable USB using Rufus or a similar tool, selecting “GPT / UEFI” where available.</li>
+          <li><strong>Backup</strong> important data from the target machine (especially if dual‑booting with Windows).</li>
+          <li><strong>Boot</strong> from the USB by selecting it from the UEFI boot menu.</li>
+          <li><strong>Choose</strong> “Try Ubuntu” first to verify Wi‑Fi, display, and basic hardware support.</li>
+          <li><strong>Launch</strong> the installer from the desktop and select your language and keyboard layout.</li>
+          <li><strong>Select</strong> “Install third‑party software” if you need proprietary codecs or drivers.</li>
+          <li><strong>Decide</strong> between:
+            <ul>
+              <li><strong>Erase disk and install Ubuntu</strong> – clean Linux‑only system.</li>
+              <li><strong>Install Ubuntu alongside Windows</strong> – guided dual‑boot with automatic partitioning.</li>
+            </ul>
+          </li>
+          <li><strong>Review</strong> the partition summary carefully before confirming changes.</li>
+          <li><strong>Set</strong> your timezone, username, and strong password when prompted.</li>
+          <li><strong>Wait</strong> for installation to complete; then restart and remove the USB when asked.</li>
+          <li><strong>Verify</strong> that the GRUB boot menu appears and that you can boot into both Ubuntu and Windows (if dual‑booting).</li>
+        </ol>
+
+        <hr />
+
+        <h3>Verification</h3>
+        <ul>
+          <li>GRUB menu lists Ubuntu (and Windows, if configured).</li>
+          <li>Wi‑Fi, sound, and display run correctly after first boot.</li>
+          <li><code>Settings → About</code> in Ubuntu shows the expected LTS version and disk usage.</li>
+        </ul>
+
+        <h3>Pro Tip</h3>
+        <p>
+          Right after the first boot, <strong>run updates</strong> and install only the tools you actually use
+          (browser, editor, terminal tools). A lean Linux install boots faster and survives longer without drama.
+        </p>
+      </section>
+
+      <hr class="efe-divider" />
+
+      <!-- EEE Socket Test Guide -->
+      <section id="electrical" class="efe-guide">
+        <h2>EEE Basics – Safely Test a Household Socket with a Multimeter</h2>
+
+        <div class="efe-safety-box efe-safety-critical">
+          <h3>🔴 Red Alert – Live Mains Voltage</h3>
+          <ul>
+            <li><strong>You are dealing with 230&nbsp;V AC.</strong> A mistake can be fatal.</li>
+            <li><strong>Do not attempt</strong> this if you are wet, barefoot on a damp floor, or unsure about the steps.</li>
+            <li><strong>Use only</strong> a multimeter rated for at least 600&nbsp;V CAT&nbsp;II with intact probes.</li>
+            <li><strong>Keep one hand behind your back</strong> when probing live sockets to reduce shock path risk.</li>
+          </ul>
+        </div>
+
+        <h3>Toolkit / Requirements</h3>
+        <ul>
+          <li>Digital multimeter with AC voltage range (600&nbsp;V or similar).</li>
+          <li>Probes with undamaged insulation and proper finger guards.</li>
+          <li>Dry footwear and a dry, non‑conductive floor (avoid metal or wet surfaces).</li>
+        </ul>
+
+        <hr />
+
+        <h3>Step‑by‑Step Execution</h3>
+        <ol>
+          <li><strong>Inspect</strong> the multimeter body and probes for cracks, exposed metal, or melted insulation.</li>
+          <li><strong>Set</strong> the multimeter to the highest AC voltage range (&ldquo;V~&rdquo; or &ldquo;ACV&rdquo;), typically 600&nbsp;V.</li>
+          <li><strong>Insert</strong> the black probe into the COM socket and the red probe into the V/Ω socket.</li>
+          <li><strong>Stand</strong> on a dry, insulated surface and keep your fingers behind the probe guards.</li>
+          <li><strong>Insert</strong> the black probe carefully into the left slot (neutral) of the socket.</li>
+          <li><strong>Insert</strong> the red probe into the right slot (live) without letting probes touch each other.</li>
+          <li><strong>Read</strong> the voltage: in India it should be around 220–240&nbsp;V AC.</li>
+          <li><strong>Move</strong> the black probe to the earth pin (top round hole) and keep the red probe in live.</li>
+          <li><strong>Confirm</strong> a similar 220–240&nbsp;V AC reading – this checks live‑to‑earth integrity.</li>
+          <li><strong>Shift</strong> the red probe to neutral while black is on earth and verify a small or near‑zero reading.</li>
+          <li><strong>Remove</strong> the probes in reverse order and turn off the multimeter.</li>
+        </ol>
+
+        <hr />
+
+        <h3>Verification</h3>
+        <ul>
+          <li>Live‑to‑neutral and live‑to‑earth both show ~230&nbsp;V AC.</li>
+          <li>Neutral‑to‑earth shows only a few volts (ideally &lt; 5&nbsp;V).</li>
+          <li>Socket does not spark, smell, or heat abnormally during the test.</li>
+        </ul>
+
+        <h3>Pro Tip</h3>
+        <p>
+          Mark sockets that fail these tests with a visible label like
+          <strong>“DO NOT USE – FAULTY”</strong> and get a qualified electrician to fix them.
+          A 5‑minute test is cheaper than replacing burnt appliances later.
+        </p>
+      </section>
+
+      <hr class="efe-divider" />
+
+      <!-- JNTUA Certificate Guide -->
+      <section id="certificates" class="efe-guide">
+        <h2>Certificate Fix – Apply for Duplicate JNTUA CMM/PC</h2>
+
+        <div class="efe-safety-box efe-safety-warning">
+          <h3>🔴 Red Alert – Official Rules Only</h3>
+          <ul>
+            <li><strong>Use only</strong> official JNTUA formats and fee details – rules change; cross‑check once on the university website.</li>
+            <li><strong>Keep photocopies</strong> or scans of any remaining marks memos and ID cards.</li>
+            <li><strong>Do not hand over originals</strong> to unauthorized agents; work through your college or university exam cell.</li>
+          </ul>
+        </div>
+
+        <h3>Toolkit / Requirements</h3>
+        <ul>
+          <li>Hall‑ticket number and registered name as per university records.</li>
+          <li>Government ID proof (Aadhaar, PAN, Passport, etc.).</li>
+          <li>FIR copy or loss report (if certificates are lost/stolen), as required by JNTUA.</li>
+          <li>Passport‑size photographs (as per current instructions).</li>
+          <li>Demand draft / online payment proof as per latest JNTUA fee structure.</li>
+        </ul>
+
+        <hr />
+
+        <h3>Step‑by‑Step Execution</h3>
+        <ol>
+          <li><strong>Visit</strong> the official JNTUA website and navigate to the Examinations or Notifications section.</li>
+          <li><strong>Locate</strong> the latest notification or guidelines for issuing duplicate CMM/PC.</li>
+          <li><strong>Download</strong> the prescribed application form for duplicate certificates.</li>
+          <li><strong>Fill</strong> the form clearly in BLOCK LETTERS with accurate hall‑ticket number, course, year, and contact details.</li>
+          <li><strong>Attach</strong> photocopies of any available old certificates, ID proof, and FIR/loss report if specified.</li>
+          <li><strong>Prepare</strong> the demand draft or online payment as per the exact amount, in favour of the university account mentioned.</li>
+          <li><strong>Verify</strong> that the DD details (name, amount, bank, date) match what is written in the application form.</li>
+          <li><strong>Route</strong> the application through your college principal or exam branch if the notification demands college attestation.</li>
+          <li><strong>Submit</strong> the complete set (application, enclosures, DD/payment proof) at the JNTUA exam branch or by the instructed postal address.</li>
+          <li><strong>Collect</strong> the acknowledgment or inward number for tracking purposes.</li>
+          <li><strong>Follow up</strong> after the indicated processing time via college exam cell or official contact numbers/emails.</li>
+        </ol>
+
+        <hr />
+
+        <h3>Verification</h3>
+        <ul>
+          <li>Duplicate CMM/PC carries the correct spelling of your name, hall‑ticket number, and course details.</li>
+          <li>Issue date and duplicate note are clearly printed as per JNTUA format.</li>
+          <li>Seals and signatures match other official JNTUA documents.</li>
+        </ul>
+
+        <h3>Pro Tip</h3>
+        <p>
+          As soon as you receive the duplicate certificates, <strong>scan and store</strong> them in at least two
+          cloud locations plus one offline USB. Future applications (higher studies, jobs, visas) often accept
+          attested photocopies, so keep multiple sets ready.
+        </p>
+      </section>
+    </main>
+
+    <footer class="efe-footer">
+      <div class="efe-footer-inner">
+        <p class="efe-footer-title">Easy Fix Encyclopedia</p>
+        <p class="efe-footer-text">
+          Built to load fast, read clean, and stay usable on the worst mobile network in the room.
+        </p>
+        <p class="efe-footer-meta">
+          © <span id="efe-year"></span> EFE · Safety‑First DIY Guides
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        const body = document.body;
+        const modeToggle = document.querySelector(".efe-mode-toggle");
+        const modeIcon = document.querySelector(".efe-mode-icon");
+        const searchInput = document.getElementById("efe-search");
+        const clearButton = document.querySelector(".efe-search-clear");
+        const cardGrid = document.getElementById("efe-card-grid");
+        const navToggle = document.querySelector(".efe-nav-toggle");
+        const navLinks = document.querySelector(".efe-nav-links");
+        const yearSpan = document.getElementById("efe-year");
+
+        if (yearSpan) {
+          yearSpan.textContent = String(new Date().getFullYear());
+        }
+
+        // Prefer system dark mode once, then allow manual override
+        const storedTheme = window.localStorage.getItem("efe-theme");
+        if (storedTheme === "dark" || (!storedTheme && window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+          body.classList.add("efe-dark");
+          if (modeIcon) modeIcon.textContent = "🌙";
+        }
+
+        if (modeToggle) {
+          modeToggle.addEventListener("click", function () {
+            const isDark = body.classList.toggle("efe-dark");
+            window.localStorage.setItem("efe-theme", isDark ? "dark" : "light");
+            if (modeIcon) modeIcon.textContent = isDark ? "🌙" : "☀";
+          });
+        }
+
+        if (navToggle && navLinks) {
+          navToggle.addEventListener("click", function () {
+            navLinks.classList.toggle("efe-nav-open");
+          });
+        }
+
+        if (cardGrid && searchInput) {
+          const cards = Array.prototype.slice.call(cardGrid.querySelectorAll(".efe-card"));
+
+          function applyFilter() {
+            const raw = searchInput.value || "";
+            const query = raw.trim().toLowerCase();
+            cards.forEach(function (card) {
+              const title = card.querySelector("h3")?.textContent || "";
+              const text = card.querySelector("p")?.textContent || "";
+              const keywords = card.getAttribute("data-keywords") || "";
+              const haystack = (title + " " + text + " " + keywords).toLowerCase();
+              const matches = !query || haystack.indexOf(query) !== -1;
+              card.style.display = matches ? "" : "none";
+            });
+          }
+
+          searchInput.addEventListener("input", applyFilter);
+
+          if (clearButton) {
+            clearButton.addEventListener("click", function () {
+              searchInput.value = "";
+              applyFilter();
+              searchInput.focus();
+            });
+          }
+
+          // Card click → scroll to guide
+          cards.forEach(function (card) {
+            const button = card.querySelector(".efe-card-button");
+            const targetSelector = card.getAttribute("data-target");
+            if (!button || !targetSelector) return;
+            button.addEventListener("click", function () {
+              const target = document.querySelector(targetSelector);
+              if (!target) return;
+              const rect = target.getBoundingClientRect();
+              const offset = window.scrollY + rect.top - 80; // leave space for navbar
+              window.scrollTo({ top: offset, behavior: "smooth" });
+            });
+          });
+        }
+
+        // Close mobile nav when clicking a link
+        if (navLinks) {
+          navLinks.addEventListener("click", function (event) {
+            const target = event.target;
+            if (target instanceof HTMLAnchorElement) {
+              navLinks.classList.remove("efe-nav-open");
+            }
+          });
+        }
+      })();
+    </script>
   </body>
 </html>
 
